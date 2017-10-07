@@ -11,12 +11,12 @@ public class BGScroller : MonoBehaviour {
 
     void Start()
     {
-        startPosition = transform.position;
+        startPosition = transform.position;                                         // Looks for starting position of game object.
     }
 
     void Update()
     {
-        float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeY);
+        float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeY);      // Moves game object in the Y direction and then will reset the position to the new world space position.
         transform.position = startPosition + Vector3.up * newPosition;
     }
 }
